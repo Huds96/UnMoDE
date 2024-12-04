@@ -1,0 +1,39 @@
+---
+train:
+
+    params:
+        batch_size: 64
+        epoch: 80
+        lr: 0.001
+        decay: 0.5
+        decay_step: 60
+        warmup: 5
+        used: 0
+
+    save:
+        metapath: "/home/huds/Code/IVGaze/exp/Our"
+        folder: lbw
+        model_name: trans6
+        step: 10
+
+    data:
+        norm:
+            image: "/home/huds/Datasets/LBW_Normal"
+            label: "/home/huds/Datasets/LBW_Normal/LabelMultiView"
+            header: False
+            name: lbw
+            isFolder: True
+    
+    modelfile: model_Res
+            
+    pretrain:
+        enable: False
+        path: None
+        device: 0
+
+    device: 0
+
+    reader: reader
+
+# dropout = 0
+# dim_feed = 512

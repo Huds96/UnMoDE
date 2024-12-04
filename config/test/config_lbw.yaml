@@ -1,0 +1,17 @@
+---
+load:
+    begin_step: 10
+    end_step: 80
+    steps: 10
+
+data: 
+    norm:
+        image: "/home/huds/Datasets/LBW_Normal"
+        label: "/home/huds/Datasets/LBW_Normal/LabelMultiView"
+        header: False
+        name: lbw
+        isFolder: True
+
+savename: "evaluation"
+device: 0
+reader: reader
