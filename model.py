@@ -316,6 +316,9 @@ class Model(nn.Module):
         gazeloss = self.L1loss(gaze_predictions, label)
         
         gloss = 2*gazeloss
+
+        for kindex in range(len(gazeloss_list)):
+            gloss += gazeloss_list[kindex]
         
         gaze_samples_feature = self.GazeEmb2Feature(gazefeatures_nlevel)
         identity_features = identity_featuremap
